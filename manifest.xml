@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OfficeApp
+  xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+  xsi:type="MailApp">
+
+  <Id>b2c3d4e5-f6a7-8901-bcde-f12345678901</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>SendGuard</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="SendGuard"/>
+  <Description DefaultValue="Confirm recipients before sending email"/>
+  <IconUrl DefaultValue="https://Herbert1920.github.io/sendguard/icon-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://Herbert1920.github.io/sendguard/icon-64.png"/>
+  <SupportUrl DefaultValue="https://Herbert1920.github.io/sendguard"/>
+
+  <AppDomains>
+    <AppDomain>https://Herbert1920.github.io</AppDomain>
+  </AppDomains>
+
+  <Hosts>
+    <Host Name="Mailbox"/>
+  </Hosts>
+
+  <Requirements>
+    <Sets>
+      <Set Name="Mailbox" MinVersion="1.1"/>
+    </Sets>
+  </Requirements>
+
+  <FormSettings>
+    <Form xsi:type="ItemEdit">
+      <DesktopSettings>
+        <SourceLocation DefaultValue="https://Herbert1920.github.io/sendguard/taskpane.html"/>
+        <RequestedHeight>600</RequestedHeight>
+      </DesktopSettings>
+    </Form>
+  </FormSettings>
+
+  <Permissions>ReadWriteItem</Permissions>
+
+  <Rule xsi:type="RuleCollection" Mode="Or">
+    <Rule xsi:type="ItemIs" ItemType="Message" FormType="Edit"/>
+  </Rule>
+
+</OfficeApp>
