@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+  <meta charset="UTF-8">
+  https://appsforoffice.microsoft.com/lib/1/hosted/office.js
+  dialog.js</script>
+
+  <style>
+    body { background:#111; color:#eee; font-family:Arial; padding:20px; }
+    .box { background:#222; padding:20px; border-radius:10px; }
+    .item { padding:8px; background:#333; margin:5px 0; border-radius:6px; }
+    button { padding:10px; margin:10px; border:none; border-radius:6px; }
+    .ok { background:#f0a500; color:#111; }
+    .cancel { background:#555; color:#eee; }
+  </style>
+
+</head>
+
+<body>
+  <div class="box">
+    <h2>אישור שליחה</h2>
+    <div id="list">טוען...</div>
+
+    <button class="cancel" onclick="cancelSend()">בטל</button>
+    <button class="ok" onclick="confirmSend()">שלח</button>
+  </div>
+</body>
+</html>
